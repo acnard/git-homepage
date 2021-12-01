@@ -18,3 +18,4 @@ Now you are ready to start further development.
 2. to work on a specific feature/issue, create a branch for it with `git branch branchname` then switch to that branch with `git checkout branchname`
 3. when satisfied with it, merge it back into main by first switching back to the main branch (`git checkout main`) and then merging (`git merge branchname`). 
 NB you can do the `git branch` command by itself to see what branches you have and which on you're on
+4. push changes to remote with `git push`
