@@ -1,0 +1,60 @@
+body {background-color:white; color: black; 
+		font-family: "Bitstream Vera Sans", arial, sans-serif; font-size:95%;
+		margin-left: 12%; margin-right: 12%; 
+	}
+
+h1 {font-size: 2.3em; letter-spacing:0.15em; font-weight:normal; font-variant: small-caps;  text-align:center; }
+h2 { font-size: 1.6em; letter-spacing:0.15em; font-weight:normal; font-style:oblique; text-align:center; } 
+h3{ font-size: 1.1em;  letter-spacing:0.15em; margin-top:2em; font-variant: small-caps; text-align:left; }
+
+p{text-align:justify; line-height:1.5em; }
+cite{font-style:oblique; }
+
+table {width:100%; border-collapse:collapse; }
+td, th {border: 1px solid; background-color:white; padding-left:0.5em;}
+caption {caption-side:bottom; font-variant:small-caps; }
+.data{font-size:0.7em; }
+table.cv{ line-height:1.2em; }
+table.cv td {border-style: none; vertical-align:text-top; padding-bottom:0.3em; }
+table.cv th{width:20%; text-align:right; border-style: none; 
+			padding-right:1em; vertical-align:text-top;}
+
+p.cv{text-align:left; font-size: 0.85em;}
+.index {font-size: 0.8em;}
+
+.centred {text-align:center;}
+.right{text-align:right; }
+.left {text-align:left; }
+.rules{line-height:1.5em; list-style-type:circle; }
+.math{font-weight:bold; color:#dc143c; font-variant:small-caps; }
+.spacedname{letter-spacing:1.5em; text-align:center; }
+.skill{color:#006699; }
+
+div.floatbox {float: right; font-size:0.8em; max-width:20em; padding-left:1em; padding-right:1em; margin-left:1em; }
+img.scaled{width:100%; }
+img.middle{display: block; margin-left:auto; margin-right:auto;  }
+div.bookpic{float:left; max-width:5em; margin-right:1em; margin-bottom:2em; }
+div.rhpicture{float:right; max-width:9em; margin-left:1em; }
+div.tesseract{float:right; max-width:12em; margin-left:1em; }
+
+div.randompic{ max-width:16em; }
+div.randompic img{border:black solid 1px; }
+.lfloat{float:left; margin-right:1em;}
+.rfloat{float:right; margin-left:1em; }
+
+.floatstop{clear:both; }
+
+div.nav{float:left; font-size:0.85em; max-width:4.3em; }
+div.foot{font-size:0.85em; max-width: 20em; margin-bottom:1em; }
+div.validation{float:right; font-size:0.75em; max-width:7em; margin-bottom:1em;}
+
+ul.menu{ float:right; font-size:0.8em; list-style-type:none; }
+
+
+a:link {color: green;}
+a:visited {color: purple;}
+a:hover {color: red;}
+a:focus {color: red;}
+a:active {color: green;}
+
+

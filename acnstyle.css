@@ -1,0 +1,148 @@
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  margin-left: 10%; /* looks nicer than 2ch **/
+  margin-right: 10%;
+/*  word-wrap: break-word; */
+}
+h1 {font-size: 2.3em; letter-spacing:0.15em; font-weight:normal; font-variant: small-caps; }
+.subtitle { font-size: 1.6em; letter-spacing:0.15em; font-variant: normal;font-weight:normal; font-style:oblique;}
+h2 { font-size: 1.4em; letter-spacing:0.15em; font-weight:normal; font-variant: small-caps; } 
+h3{ font-size: 1.1em;  letter-spacing:0.15em; margin-top:2em; font-variant: small-caps; }
+
+p{text-align:justify; }
+footer {font-size: 0.8em;}
+.spacedname{letter-spacing:1.5em;} /**in home and cvs **/
+.centred{text-align:center;}
+.right{text-align:right; }
+.left {text-align:left; }
+
+
+/* NAVIGATION STYLING */
+
+.dropbtn {
+  background-color: #8A8A69;
+  color: white;
+  padding: 10px 16px; /** less padding on top/bottom of button, more on right-left **/
+  font-size: 0.9em;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #707070; /**background of dropdown*/
+  min-width: 20ch; /**formerly 160px **/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 0.8em;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: cornflowerblue;} /*color of selected link */
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #505050;}
+
+/** NEW FLOATING IMAGE STYLING 
+	Floating images are the ones that float to the left or right of text paragraphs (when used in conjunction with the left or right classes). They are sized in proportion to the text size. Set both max-width and max-height to 50ch to get portait and landscape images equally sized, and in proportion to the text. (nb this is incompatible somehow with width:100%). To prevent the resulting overflow of landscape images on small screen, use a media query.
+	They are also used for the random picture gallery
+**/
+img.floating {
+/*  width: 100%; */
+  max-width: 50ch; 
+  max-height: 50ch; 
+  margin-top: 1ch;
+  margin-bottom: 1ch;
+  border:black solid 1px;
+}
+/* when viewport width is reduced and approaches the max-width of the images set above (50ch), start showing images at 100% instead of proportionally to text size **/
+@media only screen and (max-width: 90ch ){
+  img.floating{
+	  max-width: 100%;
+  }
+}
+
+img.right {
+  float: right; 
+  margin-left: 1em;
+}
+img.left {
+  float: left;
+  margin-right: 1em;
+}
+
+img.tesseract{
+	max-width:12em; margin-left:3em; margin-right:1em;
+}
+img.middle{display:block; margin-left:auto; margin-right:auto;  }
+
+
+/** TABLE STYLING **/
+
+/** basic table used in java and cv **/
+table {width:100%; border-collapse:collapse; }
+td, th {border: 1px solid; background-color:white; padding-left:0.5em; }
+
+/** cv-specific styling */
+table.cv{ line-height:1.2em; max-width:100ch;}
+table.cv td {border-style: none; vertical-align:text-top; padding-bottom:0.3em;}
+table.cv th{width:20%; text-align:right; border-style: none; padding-right:1em; vertical-align:text-top; font-weight: normal; font-size:0.9em;}
+p.cv{text-align:left; font-size: 0.85em;}
+.skill{color: #e62e00; }
+
+/***EXPANDERS ***/
+.details {
+/*  overflow: hidden; */
+  background: #f0f0f0;
+  padding: 2ch;
+  margin:0; /* no gap between details and expander */
+  display: none; /** the details are normally hidden**/
+}
+.accordion input:checked ~ .details {
+  display: block; /** show details when checkbox is checked **/
+}
+.accordion input {
+  display: none; /** hide the checkbox itself**/
+}
+.accordion label { /** style the expander bar **/
+  display: block; 
+  background: #f0f0f0; 
+  color: #505080;
+  padding: 0.5ch 4ch; /*top-bottom and left-right padding of label*/
+  cursor: pointer;
+  text-align: right;
+  font-size: 0.8em;
+}
+.accordion label::after {
+  content: "\25ba"; /* right facing arrow */
+  padding-left: 1ch;
+}
+.accordion input[type=checkbox]:checked + label::after{
+    content: "\25bc"; /*change to down-facing arrow*/
+}
+
+
+
+/** styling used by applets **/
+
+.rules{line-height:1.5em; list-style-type:circle; color:#004000;}
+.math{font-weight:bold; color:#dc143c; font-variant:small-caps; }
+cite{font-style:oblique; }
+.data{font-size:0.7em; }
+caption {caption-side:bottom; font-variant:small-caps; }
+
+
+

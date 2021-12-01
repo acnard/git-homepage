@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Java applet implementing modern fortune cards" />
+<meta name="keywords" content="tarot, fortune, destiny, fortune cards, destiny cards" />
+
+<title>Destiny Cards</title>
+<link rel="stylesheet" href="acnstyle.css" />
+<style>
+	body {background-color:#ccccff; }
+</style>
+
+</head>
+<body>
+
+<!-- navigation back to index -->
+<nav>
+	<a href="index.html"><button class="dropbtn">home</button></a>
+</nav>
+
+<h1 class="centred">Destiny Cards</h1>
+
+<p class="centred">
+<!--[if !IE]> non IE browsers will use this outer object and won't understand inner object -->
+<object 
+		codetype="application/java" 
+		codebase="tarot/" 
+		classid="java:TarotButton.class" 
+		width="100" height="30"> 
+<!--<![endif]-->
+	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+            width="100" height="30"> 
+          <param name="codebase" value="tarot" />
+		  <param name="code" value="TarotButton" />
+	<!-- fallback text to display if both objects fail -->
+	<span class="math">tarot applet - requires java enabled browser</span> 
+	</object>
+<!--[if !IE]> for non IE browsers, close outer object -->
+</object>
+<!--<![endif]--> 
+<br />
+
+
+Click the button (which should appear above) to start the applet. <br />
+<em>(n.b. Program now also includes Italian-language option - Ora comprende anche opzione di lingua italiana)</em>
+</p>
+
+<p>
+<strong>Credits:</strong>
+The destiny cards applet is based on <a href="http://www.amazon.co.uk/exec/obidos/ASIN/190275753X/qid=1140601698/sr=1-1/ref=sr_1_3_1/203-8345211-9439916">
+<cite>Titania Hardie's Fortune Cards.</cite></a> 
+The Italian texts are by <a href = "http://www.tereo.it/">Andrea Tuveri</a>
+</p>
+<hr />
+
+<footer class="right">
+To install or update Java:<br />
+   	<a href="https://www.java.com/en/download/">https://www.java.com/en/download/
+    </a>
+</footer>
+
+
+</body>
+</html>
+
+

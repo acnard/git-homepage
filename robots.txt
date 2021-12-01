@@ -1,0 +1,5 @@
+# robots.txt for http://www.annanardella.it/
+
+User-agent: *
+Disallow:/albums # photo albums
+Disallow:/docs # drop storage

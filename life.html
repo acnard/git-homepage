@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="an interactive java applet implementing the cellular automaton 
+Conway's Game of Life with an ageing feature" />
+<meta name="keywords" content="Conway's game of life, applet, John Conway, java, cellular automata, mathematics, Daniel Dennett, emergent properties, emergence, artificial life" />
+
+<title>Conway's Game of Life Applet</title>
+<link rel="stylesheet" href="acnstyle.css" />
+<style>
+	body {background-color:#e6e600;}
+	h1 { color: #004000; }
+	h2 { color: #006600; }
+	h3 { color: #660066;}
+	aside {float: right; font-size:0.8em; max-width:20em; padding-left:1em; padding-right:1em; margin-left:1em;background-color: #ccaa66;}
+</style>
+
+</head>
+<body>
+
+<!-- navigation back to index -->
+<nav>
+	<a href="index.html"><button class="dropbtn">home</button></a>
+</nav>
+
+<h1 class="centred">Conway's Game of Life</h1>
+<h2 class="subtitle centred">a cellular automaton</h2>
+
+<h3>Description:</h3>
+<p>
+This applet implements the Game of Life - a cellular automaton discovered by the mathematician John Conway. The Life field is a grid of square cells, each of which can be either "on" (coloured in) or "off" (background colour) at any given time. You can think of this as meaning that the coloured cells are "alive", while the grey ones are "dead". The fate of each cell in the next instant depends on how many of its eight immediate neighbours (including those along the diagonals) are alive in the preceding instant.
+</p>
+<p>
+The rules of Life can be very simply summed up as follows:
+</p>
+<ul class="rules">
+<li>Cells that have exactly 3 living neighbours at one instant will be "on" in the  next instant.</li>
+<li>Cells that have exactly 2 living neighbours at one instant will stay as they are in the next instant.</li>
+<li>Cells with any other number of living neighbours at one instant will turn "off" the next instant.</li>
+</ul>
+
+
+<p>To put it another way, if a living cell has 2 or 3 live neighbours it will "survive" into the next generation, while a greater or lesser number of neighbours will cause it to "die" - presumably of overcrowding or loneliness. Conversely, dead cells that have exactly three living neighbours will be "born" in the next generation. 
+</p>
+<p>Try this out in the applet: click on the grid to turn cells on or off, and use the <span class="math">Next</span> button to see what happens to them in the next generation.
+</p>
+
+<h3>Quick start:</h3>
+<p>
+Click <span class="math">Random Fill</span> and then <span class="math">Start</span>. While the simulation is running, it's interesting to click near a stable (black) cluster to see what happens.
+The colour of  a cell reflects its age: newborns are yellow, they grow progressively more orangey as 
+they age, and then turn black after ten generations.
+</p>
+
+<p>
+<!--[if !IE]> non IE browsers will use this outer object and won't understand inner object -->
+<object codetype="application/java" 
+		codebase="life/" 
+		classid="java:LifeApplet.class" 
+		width="430" height="220"> 
+<!--<![endif]-->
+	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+            width="430" height="220"> 
+          <param name="codebase" value="life" />
+		  <param name="code" value="LifeApplet" />
+	<!-- fallback text to display if both objects fail -->
+	<span class="math">conway's game of life applet - requires java enabled browser</span> 
+	</object>
+<!--[if !IE]> for non IE browsers, close outer object -->
+</object>
+<!--<![endif]-->
+</p>
+
+
+
+<h3> Instructions: </h3>
+<p>
+To fill in the life grid you can click <span class="math">Random Fill</span> a few times, and/or click directly on the grid to toggle individual cells on/off. 
+Then click <span class="math">Next</span> to advance one generation at a time, or <span class="math">Start</span> to watch the Life field evolve automatically.
+You can do more individual filling at any time during the evolution of the life grid. The <span class="math">Clear</span> button kills all the cells.
+</p>
+
+<aside>
+<h3>More applets on this site: </h3>
+<p>
+Go to the <a href = "ant.html">
+Langton's Ant</a> applet for another example of a cellular automaton that exhibits interesting (and surprising) behaviour. For a slightly different take on emergent properties, try the chaos exploration applet: <a href = "chaos.html">Out of Order, Chaos</a>, or experiment with evolution using the <a href="biomorph.html">Biomorph Breeder</a> applet to evolve trees into animal forms.
+</p>
+</aside>
+
+
+<h3>What's the point?: </h3>
+<p>
+The game of life shows how simple automata (the life cells) obeying mindless rules 
+(the neighbour-count algorithm for dying or being born) can exhibit  what are called "emergent properties": a higher-order level of 
+complexity  which seems to be more than the sum of its parts. This holds up a mirror to <em>real</em> life, where particles obeying the laws of physics have, in the fullness of evolutionary time, given rise to the rich complexity of the world around us.
+</p>
+
+<h3>References:</h3>
+<a href="http://www.amazon.co.uk/Darwins-Dangerous-Idea-Evolution-Meanings/dp/0684802902/">
+	<img class="left" src="books/dennet.gif" alt="dennett book" /></a>
+
+<p>
+My information on the rules of Life was taken from Ch.7 of the book: <a href="http://www.amazon.co.uk/Darwins-Dangerous-Idea-Evolution-Meanings/dp/0684802902/"> 
+<cite>Darwin's Dangerous Idea - Evolution and the Meanings of Life</cite></a> - by Daniel Dennett. 
+</p>
+
+
+<h3>Game of Life links (offsite): </h3>
+<p>
+Check out Paul Callahan's <a href="http://www.radicaleye.com/lifepage/">Life Pattern Catalog</a> for an amazing window into the "biodiversity" of the Life universe. I also recommend  <a href="http://www.ibiblio.org/lifepatterns/">Alan Hensel's</a> Conway's Game of Life -  probably the most powerful Life applet on the web.
+</p>
+
+</body>
+</html>
+
+

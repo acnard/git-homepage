@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="an interactive java applet demonstrating the behaviour of the cellular automaton Langton's Ant" />
+<meta name="keywords" content="Langton's ant, Christopher Langton, java applet, cellular automata, mathematics, Ian Stewart, Jack Cohen, emergent properties" />
+
+<title>Langton's Ant Applet</title>
+<link rel="stylesheet" href="acnstyle.css" />
+<style>
+	body {background-color:#e6e600;}
+	h1, h2, h3 { color: #0000a0; }
+</style>
+
+</head>
+<body>
+
+<!-- back to index button, style the same as the drop-down buttons -->
+<nav>
+	<a href="index.html"><button class="dropbtn">home</button></a>
+</nav>
+
+<h1 class="centred">Langton's Ant</h1>
+<h2 class="subtitle centred"> a cellular automaton </h2>
+
+<h3>Description:</h3>
+<p>
+Langton's ant is a cellular automaton (See the <a href="#notes">Notes</a> at the bottom of this page for more on cellular automata) which poses a problem that is currently baffling mathematicians. The ant lives by three simple rules:
+</p>
+<ul class="rules">
+<li>If it is on a yellow cell it makes a 90° turn to the left. </li>
+<li>If it is on a grey cell it makes a 90° turn to the right. </li>
+<li>As it moves to the next square, the one that it is on changes colour from yellow to grey, or the reverse.</li>
+</ul>
+
+<p>
+The result is a quite complicated and apparently chaotic motion... but after about ten thousand moves the ant locks into a cycle of 104 moves which causes it to build a broad diagonal "highway". What's more, the ant seems to always build the highway (though nobody has been able to <em>prove</em> this yet) even if "obstacles" of yellow squares are scattered in its path, provided it finds enough grey squares on the periphery. Try it out yourself in the applet below.
+</p>
+ 
+<p class="centred">
+<!--[if !IE]> non IE browsers will use this outer object and won't understand inner object -->
+<object codetype="application/java" 
+		codebase="ant/" 
+		classid="java:AntApplet.class" 
+		width="420" height="245"> 
+<!--<![endif]-->
+	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+            width="420" height="245"> 
+          <param name="codebase" value="ant" />
+		  <param name="code" value="AntApplet" />
+	<!-- fallback text to display if both objects fail -->
+	<span class="math">Langton's ant applet - requires java enabled browser</span> 
+	</object>
+<!--[if !IE]> for non IE browsers, close outer object -->
+</object>
+<!--<![endif]-->
+</p>
+ 
+
+<h3>Quick Start:</h3>
+<p>
+Just click <span class="math">Start</span> and watch the ant run around - the "highway" appears after about 10,000 moves.
+</p>
+
+<h3>Instructions: </h3>
+<p>
+The ant's initial direction is North. Click <span class="math">Next</span> to walk it through a few moves, and satisfy yourself that it follows the rules described above. <em>(N.B. ant shown dark grey when on a grey square, and orange when on a yellow square)</em>
+</p>
+<p>
+Then click <span class="math">Start</span> and look out for the highway. To see how it behaves with an obstacle click <span class="math">AddObstacle</span>.
+</p>
+
+<h3>References: </h3>
+
+<a href="http://www.amazon.co.uk/Collapse-Chaos-Discovering-Simplicity-Complex/dp/0140291253/">
+	<img class="left" src="books/cohen.gif" alt="cohen book"/></a>
+
+
+<p>
+My description of Langton's Ant and cellular automata is taken from the book: <a href="http://www.amazon.co.uk/Collapse-Chaos-Discovering-Simplicity-Complex/dp/0140291253/"> 
+<cite>The Collapse of Chaos - Discovering Simplicity in a Complex World</cite></a> - by Jack Cohen and Ian Stewart. 
+</p>
+<p>
+Another Ian Stewart inspired applet on this site is <a href="chaos.html">Out of Order, Chaos</a> - based on his book <cite>Does God Play Dice? The New Mathematics of Chaos</cite>.
+</p>
+
+<h3 id="notes">Notes:</h3>
+<p>
+A <em>cellular automaton</em> is a grid of cells which switch to different states (in this case yellow and grey) according to a  specific set of rules. Langton's ant (named after its inventor, mathematician Christopher Langton) is one of the simplest cellular automata. For a more complex example of a cellular automaton see the <a href="life.html">Conway's Game of Life</a> applet on this site .
+</p>
+
+
+</body>
+</html>
+
+
+

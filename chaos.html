@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="a java applet which shows how patternless chaotic 
+behaviour can be obtained by iterating a simple equation" />
+<meta name="keywords" content="chaos, Ian Stewart, java applet, iteration, mathematics, does god play dice" />
+
+<title>Out of Order, Chaos</title>
+<link rel="stylesheet" href="acnstyle.css" />
+<style>
+	body {background-color:#ffffd7; color:#0000a0 }
+</style>
+
+</head>
+<body>
+
+<!-- navigation back to index -->
+<nav>
+	<a href="index.html"><button class="dropbtn">home</button></a>
+</nav>
+
+<h1 class="centred">Out of Order, Chaos</h1>
+<h2 class="centred subtitle"><em>iteration of kx<sup>2</sup>-1</em></h2>
+
+
+<h3 id="description">Description:</h3>
+<p>
+ In his book <cite>Does God Play Dice?</cite>, mathematician Ian Stewart describes how iteration of a very simple equation can 
+ produce an extremely complex chaotic output . (See the <a href="#notes">notes</a>
+ for an explanation of what iteration means). 
+</p>
+<p>For example, if you iterate <span class="math">x<sup>2</sup>-1</span>, with a starting value of <span class="math">x<sub>0</sub>=0.54321</span>
+ (try this in the applet by entering <span class="math">k=1</span> and then hitting the <span class="math">Enter</span> key), you get a cyclic output that oscillates regularly 
+ between 0 and -1. However if you do the same thing with <span class="math">2x<sup>2</sup>-1</span> (in the applet, enter <span class="math">k=2</span> and then hit the <span class="math">Enter</span> key), you'll
+ find that the resulting output doesn't seem to follow any kind of pattern, and in fact looks random. You can use the  <span class="math">&lt;</span> and  <span class="math">&gt;</span> buttons to explore how the output continues to the right and left, and see for yourself that it never seems to settle down into any kind of regular behaviour. 
+</p>
+
+<h3 id="chaos"></h3>
+<p class="centred">
+<!--[if !IE]> non IE browsers will use this outer object and won't understand inner object -->
+<object codetype="application/java" 
+		codebase="chaos/" 
+		classid="java:ChaosApplet.class" 
+		width="605" height="270"> 
+<!--<![endif]-->
+	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+            width="605" height="270"> 
+          <param name="codebase" value="chaos" />
+		  <param name="code" value="ChaosApplet" />
+	<!-- fallback text to display if both objects fail -->
+	<span class="math">chaos exploration applet - requires java enabled browser</span> 
+	</object>
+<!--[if !IE]> for non IE browsers, close outer object -->
+</object>
+<!--<![endif]-->
+ 
+</p>
+
+<p> 
+Another interesting thing to try with <span class="math">2x<sup>2</sup>-1</span> is to change the starting value of <span class="math">x</span> ever so slightly, 
+say by setting it to <span class="math">0.543211</span> instead of <span class="math">0.54321</span>. You'll see that a tiny change in the starting value produces a 
+completely different output.
+</p>
+<p>Ian Stewart suggests many other fascinating possibilities. If you put <span class="math">k=1.4</span> you get a complicated cycle 
+through thirty two different values. Chaos sets in around <span class="math">k=1.5</span>. After that, it seems that the bigger you make <span class="math">k</span>, 
+the more chaotic things get... or do they? At <span class="math">k=1.74</span> you see well-developed chaos, but <span class="math">k=1.75</span> unexpectedly settles
+down into an orderly cycle.
+</p>
+<p> <q>Out of chaos emerges pattern. The two are inextricably related.</q> Go to the <a href="#chaos">applet</a> and see for yourself.
+</p>
+
+<h3>Instructions: </h3>
+<p>
+This applet iterates <span class="math">kx<sup>2</sup>-1</span> for any choice of <span class="math">k</span> and starting value of <span class="math">x</span>.  Type your chosen values into the text boxes, then hit the <span class="math">Enter</span> key or click the <span class="math">Iterate</span> button to plot the graph.
+</p>
+<p>The graph and list display the results of 300 
+iterations starting from the <q>show from</q> value. To see the next 300 iterations just click the <span class="math">&gt;</span> button, and conversely click <span class="math">&lt;</span> to view the previous 300 iterations. You can also type in your choice of <q>show from</q> value.
+</p>
+<p>
+Clicking on an item in the result list highlights the corresponding point on the graph and, conversely, clicking on a point of the graph will select the corresponding item in the list.  Use the <span class="math">Up</span> and <span class="math">Down</span> arrow keys to scroll through the values in the result list, higlighting the corresponding point on the graph each time.
+</p>
+ 
+<h3>References: </h3>
+<a href="http://www.amazon.co.uk/Does-God-Play-Dice-Mathematics/dp/0140256024">
+	<img class="left" src="books/stewart.gif" alt="stewart book" /></a>
+
+<p>
+This applet implements an exercise suggested in the book: <a href="http://www.amazon.co.uk/Does-God-Play-Dice-Mathematics/dp/0140256024"> 
+<cite>Does God Play Dice? The New Mathematics of Chaos</cite></a> - by Ian Stewart. 
+</p>
+
+<h3>More Applets: </h3>
+<p>
+Other mathematical applets you might like to try on this site are <a href="life.html"> Conway's Game of Life</a> -  the classic simulation with something extra (the cells gradually change colour as they grow older). And for another, less frequently implemented cellular automaton, check out <a href="ant.html"> Langton's Ant</a> .
+</p>
+
+
+<h3 id="notes">Notes:</h3>
+<p>
+<em>Iteration</em> means doing the same thing over and over again. 
+Suppose you want to iterate the operation <span class="math">x<sup>2</sup></span>.
+ You have to start somewhere, so you might choose an initial value:
+<span class="math">x<sub>0</sub>= 2</span>.  Plug this value into the original equation and you get: <span class="math">2<sup>2</sup> = 4 </span>. 
+ Let this answer be your <em>new</em> value of x : <span class="math">x<sub>1</sub>= 4</span>. 
+ Plug the new value of  <span class="math">x</span> back into the equation to get the next answer: <span class="math">x<sub>2</sub>= 4<sup>2</sup> = 16 </span>.
+ Continue plugging the answers back into the equation and you'll get: <br />
+ <span class="math">x<sub>3</sub>= 16<sup>2</sup>  = 256</span><br />
+ <span class="math">x<sub>4</sub>= 256<sup>2</sup>  = 65536</span><br />
+ <span class="math">x<sub>5</sub>= 65536<sup>2</sup>  = 4294967296</span><br />
+... and so on. Clearly this particular iteration is going to shoot off toward infinity pretty quickly, but there are others which do 
+more interesting things. Go back to the <a href="#description">Description</a> to read about them.
+</p>
+
+
+</body>
+</html>

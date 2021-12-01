@@ -1,0 +1,212 @@
+<!DOCTYPE html> 
+<html>
+
+<head> 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Java applet for breeding biomorphs as described by Richard Dawkins in the book The Blind Watchmaker" />
+<meta name="keywords" content="Richard Dawkins, biomorph, applet, evolution, genotype, phenotype, the blind watchmaker, artificial life, genes" />
+
+<title>Biomorph Breeder</title>
+<link rel="stylesheet" href="acnstyle.css" />
+<style type="text/css">
+	body {background-color:#ffffd0; }
+	h1 { color: #dd341f; }
+	h2 { color: #0000a0; }
+</style>
+
+</head>
+<body>
+
+<!-- navigation back to index -->
+<nav>
+	<a href="index.html"><button class="dropbtn">home</button></a>
+</nav>
+
+<p class="right">
+<em>also on this site </em> 
+<a href="espiritu.html">Espiritu Norie:</a> a topological short story
+</p>
+
+
+<img class="right" src="images/klimt104.jpg" alt="klimt painting" />
+
+
+<h1>Biomorph Breeder</h1>
+<h2 class="centred subtitle">an applet for evolving trees into animal forms</h2>
+
+
+<p>
+<em>If you are already familiar with the biomorph concept described in Richard Dawkins' book "The Blind Watchmaker", skip ahead to the <a href="#quick">Quick Start</a> section below.</em>
+</p>
+
+<h3 id="overview">Overview:</h3>
+<p>
+This applet lets you experiment with breeding artificial creatures called <em>biomorphs</em>,causing them to gradually evolve into a diversity of forms. 
+The biomorphs start out as tree-like shapes, whose physical conformation is determined by 9 different genes, affecting things like the length and angle of branches, the colour, etc. (See the 	<a href="#genes"> Genes</a> section for  details). The applet displays a "parent" biomorph together with a litter of "mutant" progeny, each of which differs from the parent in some slight way. 
+</p>
+<p>
+You select whichever child most strikes your fancy to become the parent of the <em>next</em> litter... and so on. After a few generations of this kind of selective breeding, you will start to produce children that look nothing like the original tree. With a little bit of effort you can obtain biomorphs that look like insects, butterflies, frogs, bats or candelabra - to name a few. If you'd rather skip the effort, there is also "Random" button for instantly reshuffling the genes.
+</p>
+
+<h3 id="quick">Quick Start:</h3>
+<p>
+<!--[if !IE]> non IE browsers will use this outer object and won't understand inner object -->
+<object 
+		codetype="application/java" 
+		codebase="biomorph/" 
+		classid="java:MorphButton.class" 
+		width="100" height="30"> 
+<!--<![endif]-->
+	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+            width="100" height="30"> 
+          <param name="codebase" value="biomorph" />
+		  <param name="code" value="MorphButton" />
+	<!-- fallback text to display if both objects fail -->
+	<span class="math">biomorph applet - requires java enabled browser</span> 
+	</object>
+<!--[if !IE]> for non IE browsers, close outer object -->
+</object>
+<!--<![endif]-->
+Click the button (which should appear at left) to start the applet. You might want to enlarge or maximise the applet window for a better view. You can still refer back to this page when the applet is running. The parent morph will appear in the top left corner, together with a litter of its offspring. Click on the child you like best to choose it as the parent of the next litter. Or, if you feel stuck in an evolutionary rut, use the "Random" button to mix up a new genetic cocktail.
+</p>
+<p>
+There is an autoscaling feature which keeps the morphs down to a reasonable size, but you can also manually enlarge or shrink them with the "+" and "-" buttons. The parent morph's genes are shown in the text boxes. You can experiment with altering these by directly typing the desired values into the text boxes and hitting the "Enter" key. And last but not least, don't forget to take a look at the status message on the lower left -- as you move your mouse pointer around it tells you which mutation corresponds to which biomorph.
+</p>
+
+<h3>Autoscaling: </h3>
+<p>
+The expand X/Y genes are automatically ajdusted to fit the morph into the panel during breeding, or when the "Enter" key is pressed. Note that this does not affect the shape of the morph in any way. If you want to enlarge the morph unencumbered by autoscaling, use the "+" button.
+</p>
+
+<h3 id="genes">Genes:</h3>
+<p>
+The table below describes the 9 genes and how they affect the shape of the biomorphs: 
+</p>
+<table class="data">
+<caption> How each gene affects the biomorph's shape </caption>
+<tbody>
+<tr>
+	<th>Gene</th>
+	<th>Units</th>
+	<th>Range</th>
+	<th>Description</th>
+</tr>
+<tr>
+	<td>Front angle</td>
+	<td>degrees</td>
+	<td>0 to +/-360°</td>
+	<td>Angle of the branches which point toward the front (top) of the morph</td>
+</tr>
+<tr>
+	<td>Rear angle</td>
+	<td>degrees</td>
+	<td>0 to +/-360°</td>
+	<td>Angle of the branches which point toward the back (bottom) of the morph</td>
+</tr>
+<tr>
+	<td>Front elongation</td>
+	<td>multiplicative factor</td>
+	<td>0 to +/- 9.0</td>
+	<td>Elongation or foreshortening of the branches which point toward the front (top) of the morph</td>
+</tr>
+<tr>
+	<td>Rear elongation</td>
+	<td>multiplicative factor</td>
+	<td>0 to +/- 9.0</td>
+	<td>Elongation or foreshortening of the branches which point toward the back (bottom) of the morph</td>
+</tr>
+<tr>
+	<td>Expand X</td>
+	<td>multiplicative factor</td>
+	<td>0 to +/- 9.0</td>
+	<td>Makes the morph fatter or skinnier</td>
+</tr>
+<tr>
+	<td>Expand Y</td>
+	<td>multiplicative factor</td>
+	<td>0 to +/- 9.0</td>
+	<td>Makes the morph taller or shorter</td>
+</tr>
+<tr>
+	<td>Iterations</td>
+	<td>#</td>
+	<td>0 to 9</td>
+	<td>The number of times the branching is repeated</td>
+</tr>
+<tr>
+	<td>Gradient</td>
+	<td>multiplicative factor</td>
+	<td>0 to +/-1.5</td>
+	<td>Amount by which the branch segments become shorter or longer at each successive iteration</td>
+</tr>
+<tr>
+	<td>Colour</td>
+	<td>#</td>
+	<td>0 to +/-255</td>
+	<td>The hue of the morph</td>
+</tr>
+</tbody>
+</table>
+<p>
+<em> Note that the branch lengths can be negative, in which case the front angle will actually affect the backside of the morph and vice versa. The same applies to the front/rear elongation. </em>
+</p>
+
+<h3 id="map">Mutation map:</h3>
+<p>
+This is how the parent biomorph and its offspring are laid out in the applet window. Each child has a mutation which increases or decreases the value of <em>one</em> of the 9 genes. 
+</p>
+
+<table class="data">
+<caption>Layout of mutations in the applet window</caption>
+<tbody>
+<tr>
+	<td>Parent</td>
+	<td>Front angle +</td>
+	<td>Front angle -</td>
+	<td>Rear angle +</td>
+	<td>Rear angle -</td>
+</tr>
+<tr>
+	<td>Front elongation +</td>
+	<td>Front elongation -</td>
+	<td>Rear elongation +</td>
+	<td>Rear elongation -</td>
+	<td>Expand X +</td>
+</tr>
+<tr>
+	<td>Expand X -</td>
+	<td>Expand Y +</td>
+	<td>Expand Y -</td>
+	<td>Iterations +</td>
+	<td>Iterations -</td>
+</tr>
+<tr>
+	<td>Gradient+</td>
+	<td>Gradient-</td>
+	<td>Colour+</td>
+	<td>Colour-</td>
+	<td>Wildcard</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3>References: </h3>
+
+<a href="http://www.amazon.co.uk/Blind-Watchmaker-Richard-Dawkins/dp/0141026162/">
+	<img class="left" src="books/blind.gif" alt="dawkins book"/></a>
+<p>
+This applet is based on the biomorph program described in the book: <a href="http://www.amazon.co.uk/Blind-Watchmaker-Richard-Dawkins/dp/0141026162/"> 
+<cite>The Blind Watchmaker - Why the Evidence of Evolution Reveals a Universe without Design</cite></a> - by Richard Dawkins. 
+</p>
+
+<h3 >More Applets: </h3>
+<p>
+Other science applets you might like to try on this site are the cellular automata <a href="life.html"> Conway's Game of Life</a> and <a href="ant.html"> Langton's Ant</a> .
+</p>
+
+</body>
+</html>
+
