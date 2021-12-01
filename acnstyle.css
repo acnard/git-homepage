@@ -90,6 +90,7 @@ img.tesseract{
 img.middle{display:block; margin-left:auto; margin-right:auto;  }
 
 
+
 /** TABLE STYLING **/
 
 /** basic table used in java and cv **/
@@ -111,6 +112,7 @@ p.cv{text-align:left; font-size: 0.85em;}
   margin:0; /* no gap between details and expander */
   display: none; /** the details are normally hidden**/
 }
+/* tilde applies style to element matching second selector (here .details) if it appears after elements matching 1st selector (checked input), presumably both have to be inside an accordion element */
 .accordion input:checked ~ .details {
   display: block; /** show details when checkbox is checked **/
 }
@@ -119,13 +121,16 @@ p.cv{text-align:left; font-size: 0.85em;}
 }
 .accordion label { /** style the expander bar **/
   display: block; 
+  width: 80%;
+  float: right; 
   background: #f0f0f0; 
   color: #505080;
-  padding: 0.5ch 4ch; /*top-bottom and left-right padding of label*/
+  /*padding: 0.5ch 4ch; /*top-bottom and left-right padding of label*/
   cursor: pointer;
   text-align: right;
   font-size: 0.8em;
 }
+  
 .accordion label::after {
   content: "\25ba"; /* right facing arrow */
   padding-left: 1ch;
